@@ -33,7 +33,7 @@ public class ColeccionDecimalesTest {
     
     @Test
     public void testRedondear(){
-    	assertEquals(3, this.numeros.redondear(this.numeros.media()), 1e-10);
+    	assertEquals(2, this.numeros.redondear(this.numeros.media()), 1e-10);
     }
 
 }
