@@ -38,5 +38,9 @@ public class Persona {
     public String inicial() {
         return this.nombre.substring(0, 1) + ".";
     }
+    
+    public String nombreToCaps(String nombre){
+		return null;
+	}
 
 }
