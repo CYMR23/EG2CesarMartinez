@@ -44,5 +44,47 @@ public class FraccionTest {
     public void testDecimal() {
         assertEquals(2.0/3.0, fraccion.decimal(), 1e-10);
     }
+    
+    @Test
+    public void testIsPropia() {
+    	assertTrue(this.fraccion.isPropia(this.fraccion));
+    }
+    
+    @Test
+    public void testIsImpropia() {
+    	assertTrue(this.fraccion.isImpropia(this.fraccion));
+    }
+    
+    @Test
+    public void testIsEquivalente() {
+    	assertTrue(this.fraccion.isEquivalente(this.fraccion));
+    }
+    
+    @Test
+    public void testMenor() {
+    	Fraccion smallerFraccion = new Fraccion(1, 3);
+    	
+    	Fraccion comparisonResult = this.fraccion.menor(smallerFraccion, this.fraccion);
+    	assertEquals(smallerFraccion, comparisonResult);
+    }
+    
+    @Test
+    public void testMayor() {
+    	Fraccion biggerFraccion = new Fraccion(5, 6);
+    	
+    	Fraccion comparisonResult = this.fraccion.mayor(biggerFraccion, this.fraccion);
+    	assertEquals(biggerFraccion, comparisonResult);
+    }
+    
+    @Test
+    public void testMultiplicar() {
+    	Fraccion multiplicationResult = this.fraccion.multiplicar(this.fraccion, this.fraccion);
+    	Fraccion assumedResult = new Fraccion(4, 9);
+    	assertTrue(assumedResult.isEquivalente(multiplicationResult));
+    }
+    
+    
+    
+    
 
 }

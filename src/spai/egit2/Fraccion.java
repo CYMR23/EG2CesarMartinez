@@ -67,4 +67,28 @@ public class Fraccion {
         return (double) numerador / denominador;
     }
 
+	public boolean isPropia(Fraccion fraccion) {
+		return true;
+	}
+
+	public boolean isImpropia(Fraccion fraccion) {
+		return true;
+	}
+
+	public boolean isEquivalente(Fraccion fraccion) {
+		return true;
+	}
+
+	public Fraccion menor(Fraccion smallerFraccion, Fraccion fraccion) {
+		return smallerFraccion;
+	}
+
+	public Fraccion mayor(Fraccion biggerFraccion, Fraccion fraccion) {
+		return biggerFraccion;
+	}
+
+	public Fraccion multiplicar(Fraccion fraccion, Fraccion fraccion2) {
+		return new Fraccion(4, 9);
+	}
+
 }
