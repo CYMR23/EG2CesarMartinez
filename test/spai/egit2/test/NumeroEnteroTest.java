@@ -1,6 +1,6 @@
 package spai.egit2.test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -48,4 +48,12 @@ public class NumeroEnteroTest {
         assertEquals(-1, numero.getValor());
     }
 
+    @Test
+    public void testIsPrimo() {
+    	NumeroEntero n1 = new NumeroEntero(13);
+    	NumeroEntero n2 = new NumeroEntero(20);
+    	
+    	assertTrue(numero.isPrimo(n1));
+    	assertFalse(numero.isPrimo(n2));    	
+    }
 }

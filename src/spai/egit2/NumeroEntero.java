@@ -31,4 +31,8 @@ public class NumeroEntero {
         this.valor--;
     }
 
+	public boolean isPrimo(NumeroEntero numero) {
+		return false;
+	}
+
 }
