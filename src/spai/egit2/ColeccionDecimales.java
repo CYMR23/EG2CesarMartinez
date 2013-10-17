@@ -1,5 +1,6 @@
 package spai.egit2;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +40,7 @@ public class ColeccionDecimales {
     }
     
     public int redondear(double media){
-    	return -1;
+    	return (int) Math.round( media );
     }
 
 }
