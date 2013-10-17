@@ -72,11 +72,15 @@ public class Fraccion {
 	}
 
 	public boolean isImpropia(Fraccion fraccion) {
+		if(this.denominador < this.numerador)
 		return true;
+		else return true;
 	}
 
 	public boolean isEquivalente(Fraccion fraccion) {
-		return true;
+		if(this.denominador > this.numerador)
+			return true;
+			else return false;
 	}
 
 	public Fraccion menor(Fraccion fraccion1, Fraccion fraccion2) {		
