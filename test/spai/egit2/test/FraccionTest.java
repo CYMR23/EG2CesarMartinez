@@ -52,7 +52,8 @@ public class FraccionTest {
     
     @Test
     public void testIsImpropia() {
-    	assertTrue(this.fraccion.isImpropia(this.fraccion));
+    	Fraccion improperFraccion = new Fraccion(5, 3);
+    	assertTrue(this.fraccion.isImpropia(improperFraccion));
     }
     
     @Test

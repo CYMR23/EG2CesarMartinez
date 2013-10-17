@@ -35,11 +35,12 @@ public class ColeccionDecimales {
     }
     
     public double media(){
-		return -1;
+		int tamayo = this.coleccion.size();
+		return this.suma() / tamayo;
     }
     
     public int redondear(double media){
-    	return -1;
+    	return (int) Math.round( media );
     }
 
 }
