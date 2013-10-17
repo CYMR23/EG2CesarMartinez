@@ -1,6 +1,5 @@
 package spai.egit2;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +35,8 @@ public class ColeccionDecimales {
     }
     
     public double media(){
-		return -1;
+		int tamayo = this.coleccion.size();
+		return this.suma() / tamayo;
     }
     
     public int redondear(double media){
