@@ -96,7 +96,10 @@ public class Fraccion {
 	}
 
 	public Fraccion multiplicar(Fraccion fraccion, Fraccion fraccion2) {
-		return new Fraccion(4, 9);
+		int multipliedNumerator = fraccion.getNumerador() * fraccion2.getNumerador();
+		int multipliedDenominator= fraccion.getDenominador() * fraccion2.getDenominador();
+		
+		return new Fraccion(multipliedNumerator, multipliedDenominator);
 	}
 
 }
