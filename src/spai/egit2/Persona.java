@@ -40,7 +40,7 @@ public class Persona {
     }
     
     public String nombreToCaps(String nombre){
-		return null;
+		return nombre.toUpperCase();
 	}
 
 }

@@ -79,12 +79,16 @@ public class Fraccion {
 		return true;
 	}
 
-	public Fraccion menor(Fraccion smallerFraccion, Fraccion fraccion) {
-		return smallerFraccion;
+	public Fraccion menor(Fraccion fraccion1, Fraccion fraccion2) {		
+		if (fraccion1.decimal() < fraccion2.decimal()) {
+			return fraccion1;
+		} else return fraccion2;
 	}
 
-	public Fraccion mayor(Fraccion biggerFraccion, Fraccion fraccion) {
-		return biggerFraccion;
+	public Fraccion mayor(Fraccion fraccion1, Fraccion fraccion2) {
+		if (fraccion1.decimal() > fraccion2.decimal()) {
+			return fraccion1;
+		} else return fraccion2;
 	}
 
 	public Fraccion multiplicar(Fraccion fraccion, Fraccion fraccion2) {
