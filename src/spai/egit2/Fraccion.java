@@ -34,71 +34,77 @@ package spai.egit2;
  * 
  */
 public class Fraccion {
-    private int numerador;
+	private int numerador;
 
-    private int denominador;
+	private int denominador;
 
-    public Fraccion(int numerador, int denominador) {
-        this.numerador = numerador;
-        this.denominador = denominador;
-    }
+	public Fraccion(int numerador, int denominador) {
+		this.numerador = numerador;
+		this.denominador = denominador;
+	}
 
-    public Fraccion() {
-        this(1, 1);
-    }
+	public Fraccion() {
+		this(1, 1);
+	}
 
-    public int getNumerador() {
-        return numerador;
-    }
+	public int getNumerador() {
+		return numerador;
+	}
 
-    public void setNumerador(int numerador) {
-        this.numerador = numerador;
-    }
+	public void setNumerador(int numerador) {
+		this.numerador = numerador;
+	}
 
-    public int getDenominador() {
-        return denominador;
-    }
+	public int getDenominador() {
+		return denominador;
+	}
 
-    public void setDenominador(int denominador) {
-        this.denominador = denominador;
-    }
+	public void setDenominador(int denominador) {
+		this.denominador = denominador;
+	}
 
-    public double decimal() {
-        return (double) numerador / denominador;
-    }
+	public double decimal() {
+		return (double) numerador / denominador;
+	}
 
 	public boolean isPropia(Fraccion fraccion) {
-		return true;
+		if (fraccion.denominador > fraccion.numerador)
+			return true;
+		else
+			return false;
 	}
 
 	public boolean isImpropia(Fraccion fraccion) {
-		if(this.denominador < this.numerador)
-		return true;
-		else return true;
+		if (fraccion.denominador < fraccion.numerador)
+			return true;
+		else
+			return false;
 	}
 
 	public boolean isEquivalente(Fraccion fraccion) {
-		if(this.denominador > this.numerador)
 			return true;
-			else return false;
 	}
 
-	public Fraccion menor(Fraccion fraccion1, Fraccion fraccion2) {		
+	public Fraccion menor(Fraccion fraccion1, Fraccion fraccion2) {
 		if (fraccion1.decimal() < fraccion2.decimal()) {
 			return fraccion1;
-		} else return fraccion2;
+		} else
+			return fraccion2;
 	}
 
 	public Fraccion mayor(Fraccion fraccion1, Fraccion fraccion2) {
 		if (fraccion1.decimal() > fraccion2.decimal()) {
 			return fraccion1;
-		} else return fraccion2;
+		} else
+			return fraccion2;
 	}
 
 	public Fraccion multiplicar(Fraccion fraccion, Fraccion fraccion2) {
-		int multipliedNumerator = fraccion.getNumerador() * fraccion2.getNumerador();
-		int multipliedDenominator= fraccion.getDenominador() * fraccion2.getDenominador();
-		
+		int multipliedNumerator = fraccion.getNumerador()
+				* fraccion2.getNumerador();
+		int multipliedDenominator = fraccion.getDenominador()
+				* fraccion2.getDenominador();
+
 		return new Fraccion(multipliedNumerator, multipliedDenominator);
 	}
 
